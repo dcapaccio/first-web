@@ -1,0 +1,109 @@
+/** html elements */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+
+/** classes */
+
+.box {
+    text-align: center;
+    padding: 20px;
+    /* px=pixels em=fontsize proportion rem=similar to em % */
+    margin: 20px;
+    border: 1px dashed red;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.column {
+    float: left;
+    position: relative;
+    padding: 20px;
+    width: 33%;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-column {
+    flex: 1;
+    background: #f2f2f2;
+    border: 1px solid #e6e6e6;
+    padding: 20px;
+}
+
+.order_1 {
+    order: 1;
+}
+
+.order_2 {
+    order: 0;
+}
+
+
+/** ids */
+
+#BigHead {
+    text-align: center;
+}
+
+#MainMenu {}
+
+#MainMenu ul {
+    background-color: #000;
+    padding: 20px;
+    margin: 20px;
+}
+
+#MainMenu li {
+    display: inline;
+    list-style-type: none;
+}
+
+#MainMenu li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #BBB;
+}
+
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+    .flex-container {
+        /* Default direction is row. Alternatively, you could try flex wrap instead */
+        flex-direction: column;
+    }
+    .flex-column {
+        flex: 1;
+        background: #f2f2f2;
+        border: 1px solid #e6e6e6;
+    }
+    .order_1 {
+        order: 0;
+    }
+    .order_2 {
+        order: 1;
+    }
+}
